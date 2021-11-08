@@ -28,8 +28,12 @@ class ToyCardComponent {
     this.htmlElement.className = "card p-3 shadow-sm w-25 h-25 mx-2 my-2";
     this.htmlElement.innerHTML = `
     <div class="card-body">
+    <div class="column">
     <img class="h-50 w-100" src= ${imgSrc}></img>
+      <div class="card-title">
         <h2 class="h3"> ${title}  </h2>
+      </div>
+
         <p> Age restriction: ${ageRestrictions.from}  </p>
         <p> Price: ${price.amount} ${price.currency} </p>
         <p> Discount : ${this.calcPercentage(
@@ -38,6 +42,7 @@ class ToyCardComponent {
           discount.amount
         )}
         ${price.currency}
+        </div>
         </div>
     <button class ="btn btn-danger del-btn  "> X </button>
     `;

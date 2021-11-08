@@ -29,7 +29,7 @@ class ToysGridComponent {
   initialize = () => {
     this.fetchToys();
     API.getToys(this.saveData, this.showError);
-    this.htmlElement.className = "d-flex justify-content-center";
+    this.htmlElement.className = "d-flex justify-content-center flex-wrap row";
 
     this.render();
   };

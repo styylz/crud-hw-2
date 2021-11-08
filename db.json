@@ -11,14 +11,14 @@
         "from": 6
       },
       "discount": {
-        "type": "percentage",
+        "type": "amount",
         "amount": 25
       },
       "imgSrc": "https://i5.walmartimages.com/asr/2985b41a-4594-4272-9653-43463330d2e7.7b5a6bfc3a5f99e5e980481ea0802b84.png?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
     },
     {
       "id": "102",
-      "title": "MetalKing",
+      "title": "toFixed",
       "price": {
         "currency": "€",
         "amount": 333
@@ -36,7 +36,7 @@
       "id": "103",
       "title": "BoxerStar",
       "price": {
-        "currency": "€",
+        "currency": "$",
         "amount": 777
       },
       "ageRestrictions": {
@@ -47,6 +47,22 @@
         "amount": 15
       },
       "imgSrc": "https://i5.walmartimages.com/asr/4a59d31e-cebf-4735-8e1c-c062249294be_1.ae5d38f012a262586959eaa58722e85d.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+    },
+    {
+      "id": "104",
+      "title": "FortuneKeeper",
+      "price": {
+        "currency": "$",
+        "amount": 373
+      },
+      "ageRestrictions": {
+        "from": 19
+      },
+      "discount": {
+        "type": "percentage",
+        "amount": 50
+      },
+      "imgSrc": "https://i5.walmartimages.com/asr/d140c81a-313c-4cbc-8ef3-51efae1cd0f9.e4ce65104144f218f908325d566398ec.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
     }
   ]
 }
