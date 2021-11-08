@@ -26,9 +26,9 @@ class ToysGridComponent {
 
   render = () => {
     if (this.state.toys.length === 0) {
-      this.htmlElement.innerHTML = "";
       this.htmlElement.innerHTML = '<img src="assets/loading.gif">';
     } else {
+      this.htmlElement.innerHTML = "";
       const toyComponent = this.state.toys.map(
         (toy) => new ToyCardComponent(toy)
       );
