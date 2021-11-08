@@ -19,16 +19,22 @@ class ToysGridComponent {
 
   initialize = () => {
     API.getToys(this.saveData, this.showError);
+    this.htmlElement.className = "d-flex justify-content-center";
 
     this.render();
   };
 
   render = () => {
     if (this.state.toys.length === 0) {
-      this.htmlElement.innerHTML = "No information";
+      this.htmlElement.innerHTML = "";
+      this.htmlElement.innerHTML = '<img src="assets/loading.gif">';
     } else {
-      this.htmlElement.innerHTML =
-        "<pre>" + JSON.stringify(this.state.toys) + "</pre>";
+      const toyComponent = this.state.toys.map(
+        (toy) => new ToyCardComponent(toy)
+      );
+      console.log("helo", toyComponent);
+      const toyElements = toyComponent.map((toy) => toy.htmlElement);
+      this.htmlElement.append(...toyElements);
     }
   };
 }
