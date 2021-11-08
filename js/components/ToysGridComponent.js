@@ -3,13 +3,11 @@ class ToysGridComponent {
     this.htmlElement = document.createElement("div");
     this.state = {
       toys: [],
-      loading: false,
     };
     this.initialize();
   }
 
   fetchToys = () => {
-    this.state.loading = true;
     // kreipiasi i API po partraukymo issaugos
     API.getToys(this.saveData, this.showError);
   };
