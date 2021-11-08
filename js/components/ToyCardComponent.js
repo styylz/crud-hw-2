@@ -18,6 +18,7 @@ class ToyCardComponent {
       case "amount":
         let prediscount = (price / 100) * disAmount;
         discount = price - prediscount;
+        break;
     }
     return discount;
   };
