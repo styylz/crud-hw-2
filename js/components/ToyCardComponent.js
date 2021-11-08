@@ -16,6 +16,7 @@ class ToyCardComponent {
         <p> Age restriction: ${ageRestrictions.from}  </p>
         <p> Discount: ${discount.amount} ${discount.type} </p>
         </div>
+    <button class ="btn btn-danger  "> X </button>
     `;
   };
 }

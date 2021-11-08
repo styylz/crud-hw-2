@@ -7,6 +7,15 @@ class ToysGridComponent {
     this.initialize();
   }
 
+  fetchToys = () => {
+    // kreipiasi i API po partraukymo issaugos
+    API.getToys(this.saveData, this.showError);
+  };
+
+  deleteToy = (id) => {
+    API.deleteToys(id, this.fetchToys, this.showError);
+  };
+
   saveData = (toys) => {
     this.state.toys = toys;
     this.render();
@@ -18,6 +27,7 @@ class ToysGridComponent {
   };
 
   initialize = () => {
+    this.fetchToys();
     API.getToys(this.saveData, this.showError);
     this.htmlElement.className = "d-flex justify-content-center";
 
