@@ -3,23 +3,25 @@ class ToysGridComponent {
     this.htmlElement = document.createElement("div");
     this.state = {
       toys: [],
+      loading: false,
     };
     this.initialize();
   }
 
   fetchToys = () => {
+    this.state.loading = true;
     // kreipiasi i API po partraukymo issaugos
     API.getToys(this.saveData, this.showError);
   };
 
   deleteToy = (id) => {
+    //istrina elementa pagal id ir grazina is fetchToys issaugotus elementus
     API.deleteToys(id, this.fetchToys, this.showError);
   };
 
   saveData = (toys) => {
     this.state.toys = toys;
     this.render();
-    console.log(this.state.toys);
   };
 
   showError = (error) => {
@@ -45,6 +47,7 @@ class ToysGridComponent {
         ({ id, ...props }) =>
           new ToyCardComponent({
             ...props,
+            //kaip cia issikviecia funkcija ir kodel arrow ?
             onDelete: () => this.deleteToy(id),
           })
       );
