@@ -1,0 +1,19 @@
+{
+  "name": "crud-hw-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-windows": "node_modules\\.bin\\json-server --watch db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/styylz/crud-hw-2.git"
+  },
+  "author": "Miroslav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/styylz/crud-hw-2/issues"
+  },
+  "homepage": "https://github.com/styylz/crud-hw-2#readme"
+}
