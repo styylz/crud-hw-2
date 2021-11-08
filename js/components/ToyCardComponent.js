@@ -6,7 +6,8 @@ class ToyCardComponent {
   }
 
   initialize = () => {
-    const { title, price, ageRestrictions, discount, imgSrc } = this.props;
+    const { title, price, ageRestrictions, discount, imgSrc, onDelete } =
+      this.props;
     this.htmlElement.className = "card p-3 shadow-sm w-25 h-25 mx-2 my-2";
     this.htmlElement.innerHTML = `
     <div class="card-body">
@@ -16,7 +17,10 @@ class ToyCardComponent {
         <p> Age restriction: ${ageRestrictions.from}  </p>
         <p> Discount: ${discount.amount} ${discount.type} </p>
         </div>
-    <button class ="btn btn-danger  "> X </button>
+    <button class ="btn btn-danger del-btn  "> X </button>
     `;
+
+    const delBtn = this.htmlElement.querySelector(".del-btn");
+    delBtn.addEventListener("click", onDelete);
   };
 }

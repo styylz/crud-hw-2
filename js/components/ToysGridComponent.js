@@ -40,9 +40,15 @@ class ToysGridComponent {
     } else {
       this.htmlElement.innerHTML = "";
       const toyComponent = this.state.toys.map(
-        (toy) => new ToyCardComponent(toy)
+        //id ir visi like cardPropsai
+        //kodel id nera perduodamas?
+        ({ id, ...props }) =>
+          new ToyCardComponent({
+            ...props,
+            onDelete: () => this.deleteToy(id),
+          })
       );
-      console.log("helo", toyComponent);
+
       const toyElements = toyComponent.map((toy) => toy.htmlElement);
       this.htmlElement.append(...toyElements);
     }
